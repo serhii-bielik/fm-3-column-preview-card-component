@@ -35,11 +35,12 @@ body {
 .information {
   display: flex;
   flex-direction: column;
-  max-width: 330px;
-  width: 95%;
+  align-items: center;
 }
 
 .information-block {
+  max-width: 375px;
+  width: 90%;
   padding: 50px;
 }
 .information-block:first-child {
@@ -52,17 +53,15 @@ body {
 .information-block-orange {
   background-color: var(--orange);
 }
-
 .information-block-cyan {
   background-color: var(--cyan);
 }
-
 .information-block-dark-cyan {
   background-color: var(--dark-cyan);
 }
 
 .information-block__icon {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .information-block__title {
@@ -75,7 +74,7 @@ body {
 
 .information-block__description {
   line-height: 1.5rem;
-  color: hsla(0, 0%, 100%, 0.75);
+  color: var(--white);
   margin-bottom: 30px;
 }
 
@@ -101,4 +100,27 @@ body {
   background-color: transparent;
   color: var(--light-gray);
   box-shadow: 0 0 0 2px var(--light-gray);
+}
+
+@media (min-width: 800px) {
+  .information {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .information-block {
+    max-width: 310px;
+  }
+
+  .information-block:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .information-block:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .information-block__description {
+    margin-bottom: 80px;
+  }
 }
